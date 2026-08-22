@@ -1,17 +1,60 @@
 aid: handle
 name: Handle
-description: 'Handle is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Handle (Handle Inc., handle.com) is a San Francisco software company, founded in 2018 by Patrick Hogan,
+  Blake Robertson, Lucas Azevedo and Chris Woodard, that builds financial-operations software for the
+  construction industry. The Handle platform covers lien and notice management, automated lien-waiver
+  exchange, full-service research and verification, automatic state-by-state compliance deadlines, job
+  sheets, credit applications, collections and construction-native online payments, unified by what the
+  company calls its Construction Data Graph. It is sold to material suppliers, equipment dealers and
+  subcontractors — customers named on its own site include Ferguson, ABC Supply, US LBM, Oldcastle,
+  EquipmentShare, The Home Depot, Cemex, Builders FirstSource, Vulcan, Heidelberg Materials, Herc Rentals
+  and Floor & Decor. Handle markets ERP integrations ("Handle integrates with any ERP") and operates a
+  real API host at api.handle.com, and its own status page monitors components named "Main Portal API"
+  and "Payment Portal API", but it publishes no developer portal, no API reference, and no
+  machine-readable specification of any kind; the only public route to the integration surface is a
+  Contact Sales form. Handle is SOC 2 Type 1 and Type 2 compliant and publishes a Vanta-hosted trust
+  center. It raised a $27M Series B led by Marbruck with Energize Capital, Suffolk Technologies,
+  Liquid 2 Ventures, RXR, WEX and Amex Ventures participating.
 url: https://raw.githubusercontent.com/api-evangelist/handle/refs/heads/main/apis.yml
+image: https://www.handle.com/wp-content/uploads/2026/06/homepage-2.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-08-22'
 modified: '2026-08-22'
 tags:
 - Company
+- Construction
+- Construction Finance
+- Lien Management
+- Lien Waivers
+- Accounts Receivable
+- Credit Management
+- Payments
+- B2B Payments
+- Compliance
+- ERP Integration
+- Collections
+- Financial Operations
+- Material Suppliers
+- Equipment Dealers
+tags_raw:
+- Company
+- Construction
+- Construction Finance
+- Lien Management
+- Lien Waivers
+- Accounts Receivable
+- Credit Management
+- Payments
+- B2B Payments
+- Payment Compliance
+- ERP Integrations
+- Collections
+- Financial Operations
+- Material Suppliers
+- Equipment Dealers
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +63,77 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://forgeglobal.com/handle_stock/
+  url: https://www.handle.com/
+- type: Blog
+  url: https://www.handle.com/blog/
+- type: Support
+  url: https://support.handle.com/hc/en-us
+- type: Community
+  url: https://buildingblocks.handle.com/
+- type: SignUp
+  url: https://app.handle.com/
+- type: Login
+  url: https://app.handle.com/
+- type: TermsOfService
+  url: https://www.handle.com/terms/
+- type: PrivacyPolicy
+  url: https://www.handle.com/privacy/
+- type: Compliance
+  url: https://www.handle.com/security-and-trust/
+- type: TrustCenter
+  url: security/handle-trust-center.yml
+- type: StatusPage
+  url: https://status.handle.com/
+- type: Integrations
+  url: https://www.handle.com/erp-integrations/
+- type: Partners
+  url: https://www.handle.com/partners/
+- type: Lifecycle
+  url: lifecycle/handle-lifecycle.yml
+- type: Conformance
+  url: conformance/handle-conformance.yml
+- type: Security
+  url: https://www.handle.com/security-and-trust/
+- type: VulnerabilityDisclosure
+  url: security/handle-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/handle-domain-security.yml
+- type: Plans
+  url: plans/handle-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/handle-rate-limits.yml
+- type: LLMsTxt
+  url: llms/handle-llms.txt
+x-enrichment:
+  date: '2026-08-22'
+  status: minimal
+  artifacts_added: 9
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    Handle's ERP Integrations page promises "Handle integrates with any ERP" and its own status page has
+    monitored a component named "Main Portal API" since 2023-02-08, but the page's only CTAs are a
+    Contact Sales form and an "Explore the docs" button that links to the trust page rather than to any
+    documentation — there is no developer portal (developers/docs/developer.handle.com do not resolve)
+    and api.handle.com answers unauthenticated callers with nothing but a JSON route hint,
+    {"message":"specify a valid api route like {/api/integrations/{integration_name}/{action}"}.
+  evidence:
+  - url: https://www.handle.com/erp-integrations/
+    status: 200
+  - url: https://www.handle.com/contact-sales/
+    status: 200
+  - url: https://api.handle.com/api
+    status: 404
+  - url: https://api.handle.com/openapi.json
+    status: 404
+  - url: https://www.handle.com/developers
+    status: 404
+  - url: https://developers.handle.com/
+    status: 0
+  - url: https://docs.handle.com/
+    status: 0
+  - url: https://handle.statuspage.io/api/v2/components.json
+    status: 200
+  checked: '2026-08-22'

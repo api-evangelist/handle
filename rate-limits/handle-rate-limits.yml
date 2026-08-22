@@ -1,0 +1,23 @@
+generated: '2026-08-22'
+method: searched
+source: https://www.handle.com/erp-integrations/
+limit_count: 0
+limits: []
+headers: []
+exhaustion_status: null
+note: >-
+  No rate limits are documented. Handle publishes no developer portal, no API reference and no
+  machine-readable specification, so there is no published limit, window, burst or quota to record.
+  No RateLimit-* / X-RateLimit-* / Retry-After header could be observed either: the only
+  unauthenticated response api.handle.com returns is a JSON 404 route hint on /api and /api/docs,
+  which carries no rate-limit headers (checked 2026-08-22). This is a measured zero, not an unchecked
+  field.
+evidence:
+- url: https://api.handle.com/api
+  status: 404
+  observed_headers: []
+- url: https://www.handle.com/erp-integrations/
+  status: 200
+- url: https://developers.handle.com/
+  status: 0
+  note: DNS does not resolve.

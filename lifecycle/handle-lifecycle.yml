@@ -1,0 +1,70 @@
+generated: '2026-08-22'
+method: searched
+source: https://status.handle.com/
+versioning:
+  scheme: unknown
+  current: null
+  docs: null
+  note: >-
+    No public versioning policy. Handle publishes no developer portal or API reference, so no version
+    scheme, no version header, and no dated API version train could be observed.
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No published deprecation or sunset policy. RFC 8594 Sunset/Deprecation header support unknown.
+sla:
+  url: null
+  uptime_target: null
+  note: >-
+    No public SLA document. The status page reports 100.0% uptime over the trailing 90 days for all four
+    Handle-operated components, but publishes no contractual target.
+status_page: https://status.handle.com/
+status_page_platform: Atlassian Statuspage (handle.statuspage.io)
+status_page_machine_readable:
+- url: https://handle.statuspage.io/api/v2/summary.json
+  status: 200
+- url: https://handle.statuspage.io/api/v2/status.json
+  status: 200
+- url: https://handle.statuspage.io/api/v2/components.json
+  status: 200
+- url: https://handle.statuspage.io/history.rss
+  status: 200
+- url: https://handle.statuspage.io/history.atom
+  status: 200
+components:
+- name: Main Portal API
+  description: Main Portal API Servers
+  status: operational
+  monitored_since: '2023-02-08'
+- name: Main Portal UI
+  description: Frontend application
+  status: operational
+- name: Payment Portal API
+  description: Payment Portal API
+  status: operational
+- name: Payment Portal UI
+  description: Payment Portal UI
+  status: operational
+- name: Google Cloud Platform Google Kubernetes Engine
+  status: operational
+- name: Google Cloud Platform Google Cloud SQL
+  status: operational
+- name: Google Cloud Platform Google Cloud Storage
+  status: operational
+recent_incidents:
+- title: Firebase Authentication & Storage Outage
+  date: '2025-06-12'
+- title: New Inbound IP Addresses Effective March 31st
+  date: '2025-03-31'
+- title: Elevated API Errors
+  date: '2025-02-26'
+- title: Database Servers Upgrade
+  date: '2024-11-09'
+- title: Service Disruption Impacting User Access
+  date: '2024-10-23'
+deprecated_operations: []
+x-finding: >-
+  Handle's own status page is the strongest public evidence that Handle operates APIs: two of the four
+  Handle-operated components are named "Main Portal API" and "Payment Portal API", and the API component
+  has been monitored since 2023-02-08. Handle nevertheless publishes no developer portal, API reference,
+  or machine-readable specification for either surface.

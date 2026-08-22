@@ -1,0 +1,81 @@
+generated: '2026-08-22'
+method: probed
+source: live probes of every handle.com host reachable from apis.yml
+hit_count: 0
+hosts:
+- host: https://www.handle.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  soft_404_control:
+    path: /.well-known/ae-control-2784
+    status: 404
+    bytes: 243305
+    note: WordPress 404 template; honest 404s.
+- host: https://api.handle.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  soft_404_control:
+    path: /.well-known/ae-control-2784
+    status: 404
+    bytes: 166
+    note: Express "Cannot GET" 404; honest 404s.
+- host: https://app.handle.com
+  documents: []
+  soft_404_control:
+    path: /.well-known/ae-control-2784
+    status: 200
+    bytes: 216948
+    note: >-
+      CATCH-ALL. Every path on app.handle.com — including a randomly generated one — returns HTTP 200
+      with the identical 216,948-byte single-page-application shell. The 200s this host returns for
+      /.well-known/security.txt, /.well-known/api-catalog, /.well-known/agent-card.json and every other
+      probed path are NOT documents and were deliberately not recorded as such.
+x-note: >-
+  No .well-known document is served on any Handle host. No WellKnown, SecurityTxt or APICatalog pointer
+  is emitted in apis.yml — this file records a measured absence, not a surface.

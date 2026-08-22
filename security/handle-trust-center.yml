@@ -1,0 +1,37 @@
+generated: '2026-08-22'
+method: searched
+source: https://www.handle.com/security-and-trust/
+probe: true
+url: https://trust.handle.com/
+platform: Vanta
+certifications:
+- SOC 2 Type 1
+- SOC 2 Type 2
+practices:
+- Regular penetration testing and security audits
+- Continuous compliance/policy monitoring
+report_access: >-
+  The SOC 2 report is gated — "Request Report" links to the Vanta trust center at https://trust.handle.com/,
+  which requires a request/NDA flow.
+control_families:
+- name: Infrastructure security
+  controls: 16
+- name: Organizational security
+  controls: 10
+- name: Product security
+  controls: 5
+- name: Internal security procedures
+  controls: 18
+- name: Data and privacy
+  controls: 9
+evidence:
+- source: https://www.handle.com/security-and-trust/
+  http_status: 200
+  keywords: [soc 2 type 1, soc 2 type 2, compliance monitoring, penetration testing, trust]
+- source: https://trust.handle.com/
+  http_status: 200
+  note: >-
+    Vanta-hosted trust report. The served HTML is a client-side shell whose only text is
+    "Handle Inc Trust Center"; the control and certification detail renders from assets.vanta.com
+    scripts, so the certification list above was read from the provider's own
+    /security-and-trust/ page instead.

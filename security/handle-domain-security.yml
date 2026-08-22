@@ -1,0 +1,42 @@
+generated: '2026-08-22'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml hosts + the handle.com API/app/trust/status hosts
+hosts:
+- host: www.handle.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 17 13:45:11 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: api.handle.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 21 08:46:22 2026 GMT
+  hsts: true
+  hsts_max_age: 15552000
+  note: >-
+    Live API host. Root returns HTTP 404 "Cannot GET /" (Node/Express with Helmet security headers,
+    served via Google Cloud); /api and /api/docs return a JSON route hint naming
+    /api/integrations/{integration_name}/{action}.
+- host: app.handle.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 25 23:59:59 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+  hsts_preload: true
+  note: Single-page application; every path returns HTTP 200 with the same 216,948-byte shell (soft-404 catch-all).
+- host: trust.handle.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 25 16:09:59 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+  note: Vanta-hosted trust center (assets.vanta.com).
+domains:
+- domain: handle.com
+  dnssec: true
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

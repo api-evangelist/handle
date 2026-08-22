@@ -64,5 +64,19 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Handle is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/handle_stock/
+Handle (Handle Inc., handle.com) is a San Francisco software company, founded in 2018, that builds
+financial operations software for the construction industry — lien and notice management, automated
+lien-waiver exchange, full-service research and verification, automatic state-by-state compliance
+deadlines, job sheets, credit applications, collections, and construction-native online payments.
+
+Handle markets ERP integrations and operates a live API host at `api.handle.com`, and its own status
+page has monitored a component named "Main Portal API" since 2023-02-08 and one named "Payment Portal
+API" — but Handle publishes no developer portal, no API reference, and no machine-readable
+specification. The only public route to the integration surface is a Contact Sales form. See
+`x-coverage` in `apis.yml` for the probed evidence.
+
+- Website: https://www.handle.com/
+- ERP integrations: https://www.handle.com/erp-integrations/
+- Security and trust: https://www.handle.com/security-and-trust/
+- Status: https://status.handle.com/
+- Secondary-market listing this profile was harvested from: https://forgeglobal.com/handle_stock/
