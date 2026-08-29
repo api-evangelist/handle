@@ -17,6 +17,17 @@ description: >-
   center. It raised a $27M Series B led by Marbruck with Energize Capital, Suffolk Technologies,
   Liquid 2 Ventures, RXR, WEX and Amex Ventures participating.
 url: https://raw.githubusercontent.com/api-evangelist/handle/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://www.handle.com/wp-content/uploads/2026/06/homepage-2.png
 x-type: company
 x-source: harvest:secondary-market
