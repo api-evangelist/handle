@@ -64,19 +64,101 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Handle (Handle Inc., handle.com) is a San Francisco software company, founded in 2018, that builds
-financial operations software for the construction industry — lien and notice management, automated
-lien-waiver exchange, full-service research and verification, automatic state-by-state compliance
-deadlines, job sheets, credit applications, collections, and construction-native online payments.
+Handle (Handle Inc., handle.com) is a San Francisco software company, founded in 2018 by Patrick Hogan, Blake Robertson, Lucas Azevedo and Chris Woodard, that builds financial-operations software for the construction industry. The Handle platform covers lien and notice management, automated lien-waiver exchange, full-service research and verification, automatic state-by-state compliance deadlines, job sheets, credit applications, collections and construction-native online payments, unified by what the company calls its Construction Data Graph. It is sold to material suppliers, equipment dealers and subcontractors — customers named on its own site include Ferguson, ABC Supply, US LBM, Oldcastle, EquipmentShare, The Home Depot, Cemex, Builders FirstSource, Vulcan, Heidelberg Materials, Herc Rentals and Floor & Decor. Handle markets ERP integrations ("Handle integrates with any ERP") and operates a real API host at api.handle.com, and its own status page monitors components named "Main Portal API" and "Payment Portal API", but it publishes no developer portal, no API reference, and no machine-readable specification of any kind; the only public route to the integration surface is a Contact Sales form. Handle is SOC 2 Type 1 and Type 2 compliant and publishes a Vanta-hosted trust center. It raised a $27M Series B led by Marbruck with Energize Capital, Suffolk Technologies, Liquid 2 Ventures, RXR, WEX and Amex Ventures participating.
 
-Handle markets ERP integrations and operates a live API host at `api.handle.com`, and its own status
-page has monitored a component named "Main Portal API" since 2023-02-08 and one named "Payment Portal
-API" — but Handle publishes no developer portal, no API reference, and no machine-readable
-specification. The only public route to the integration surface is a Contact Sales form. See
-`x-coverage` in `apis.yml` for the probed evidence.
+**Areas:** Company · Construction · Construction Finance · Lien Management · Lien Waivers · Accounts Receivable · Credit Management · Payments · B2B Payments · Payment Compliance · ERP Integration · Collection
 
-- Website: https://www.handle.com/
-- ERP integrations: https://www.handle.com/erp-integrations/
-- Security and trust: https://www.handle.com/security-and-trust/
-- Status: https://status.handle.com/
-- Secondary-market listing this profile was harvested from: https://forgeglobal.com/handle_stock/
+## Handle on APIs.io
+
+Everything profiled for Handle is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/handle/](https://apis.io/providers/handle/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Handle Domain Security](https://apis.io/security/handle/handle-domain-security/)
+- [Handle Trust Center](https://apis.io/security/handle/handle-trust-center/)
+- [Handle Vulnerability Disclosure](https://apis.io/security/handle/handle-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Handle Plans Pricing](https://apis.io/plans/handle/handle-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Handle Rate Limits](https://apis.io/rate-limits/handle/handle-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.handle.com/)
+- [Sign up](https://app.handle.com/)
+- [Support](https://support.handle.com/hc/en-us)
+- [Blog](https://www.handle.com/blog/)
+- [Security](https://www.handle.com/security-and-trust/)
+- [Compliance](https://www.handle.com/security-and-trust/)
+- [Terms of service](https://www.handle.com/terms/)
+- [Privacy policy](https://www.handle.com/privacy/)
+- [Status](https://status.handle.com/)
+
+## API Evangelist rating
+
+**Kin Score 19.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 4.8 |
+| Access clarity | 36.8 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 26.8** — Payments
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/handle/](https://apis.io/providers/handle/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Handle: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/handle/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
